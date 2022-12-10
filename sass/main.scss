@@ -1,0 +1,407 @@
+@import "_global.scss";
+@import "_variables.css";
+
+
+
+h1{
+    font-size: 3.5em;
+}
+h2{
+    font-size: 2.7em;
+}
+h3{
+    font-size: 2em;
+}
+p{
+    font-size: 1.25em;
+}
+
+ul{
+    list-style: none;
+}
+li{
+    font-size: 1.25em;
+}
+ 
+.color-acento{ color: $color-naranja;}
+
+button{
+    font-size: 2em;
+    font-weight: bold;
+    padding: 20px 30px;
+    border-radius: 15px;
+    border: 2px solid rgba(0,0,0,0.5 );
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5 );  
+    color: white;
+    background-color: $color-naranja;
+
+}
+
+button:hover{
+    background-color: rgb(17, 17, 16);
+}
+
+.container{
+    max-width: 1400px;
+    margin: auto;
+}
+
+
+
+.logo{
+    display: flex;
+    align-items: center;
+
+    img{
+        display: flex;
+        height: 50px;
+        margin-right: 10px;
+    }
+}
+
+#hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;
+    background-image:linear-gradient(
+        0deg,
+        rgba(0,0,0,0.4),
+        rgba(0,0,0,0.4)),
+    url("../img/aa.gif");   
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;     
+
+    h1{
+        color: $color-naranja;
+    }
+}
+
+#somos-pkg {
+    .container{
+    text-align: center;
+    padding: 200px 12px;
+    h2{
+        color: rgb(221, 221, 219);
+    }
+    p{
+        color: rgb(221, 221, 219);
+    }
+
+}
+}
+
+#nuestros-catalogos{
+    background-color: rgb(30,30,30);
+    color: white;
+    text-align: center;
+
+    .container{
+        padding: 150px 0px;
+    }
+
+    h2{
+        margin-top: 0;
+    }
+
+    p{
+        display: none;
+    }
+
+    .carta{
+        background-position: center center;
+        background-size: cover;
+        padding: 50px;
+        margin: 20px;
+        border-radius: 15px;
+    }
+}
+
+@mixin cuadrado($fondito) {
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,$fondito}
+
+.carta:first-child{
+    @include cuadrado(url(../img/extras/pc.jpg));
+}
+
+.carta:nth-child(2){
+    @include cuadrado(url(../img/extras/ps4.jpg));    
+}
+
+.carta:nth-child(3){
+    @include cuadrado(url(../img/extras/xb.jpg));
+}
+
+#caracteristicas{
+    .container{
+        text-align: center;
+        padding: 200px;
+        color: rgb(221, 221, 219);
+    }
+
+    li{
+        margin: 12px 0px;
+        font-weight: bold;
+    }
+}
+
+#compra-ya{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;
+    background-image:linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)),
+    url("../img/extras/aacla.jpg");   
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+    h2{
+        color: white;
+        font-size: 9vw;
+    }    
+
+    button{
+        font-size: 5vw;
+    }
+
+    button:hover {
+        background-color: black;
+    }
+}
+
+footer .container{
+    height: 150px;
+    color: rgb(63, 62, 62);
+    background-color: rgb(44, 44, 44);
+}
+
+//Formulario
+
+ul .ulista{
+    list-style: none;
+    padding: 0;
+}
+
+h4 {
+    color: $color-naranja;
+}
+
+div a{
+    color:  rgb(228, 130, 3);
+}
+
+div a:hover{
+    color:  rgb(255, 93, 17);
+}
+
+.contact-wrapper {
+   
+    padding-top: 0px;
+}
+
+.contact-wrapper > * {
+    padding: 1em;
+}
+
+
+.content {
+    padding-top: 100px;
+}
+
+.contact-form {
+    background: #222222;
+}
+
+.contact-form form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.contact-form form label {
+    display: block;
+}
+
+.contact-form form p {
+    margin: 0;
+    padding: 1em;
+}
+
+.contact-form form .block {
+    grid-column: 1 / 3;
+}
+
+.contact-form form button,
+.contact-form form input,
+.contact-form form textarea {
+    width: 100%;
+    padding: .7em;
+    border: none;
+    background: none;
+    outline: 0;
+    color: #fff;
+    border-bottom: 1px solid $color-naranja;
+}
+
+.contact-form form button {
+    background: $color-naranja;
+    border: 0;
+    text-transform: uppercase;
+    padding: 1em;
+}
+
+.contact-form form button:hover,
+.contact-form form button:focus {
+    background: #111111;
+    color: #fff;
+    transition: background-color 1s ease-out;
+    outline: 0;
+}
+
+
+.contact-info {
+    background: #000;
+}
+
+.contact-info h4, .contact-info ul, .contact-info p {
+    text-align: center;
+    margin: 0 0 1rem 0;
+}
+
+//fin formulario
+
+//media
+
+@media (min-width: 720px){
+    
+
+    #somos-pkg{
+        .container{
+            display: flex;
+            justify-content: center;
+        }
+
+        .texto{
+            width: 50%;
+            max-width: 600px;
+            text-align: initial;
+            padding: 0px 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        h2{
+            margin-top: 0px;
+        }
+
+        .img-container{
+            background-image: url("../img/extras/ws_Halloween_pumpkin_1920x1440.jpg");
+            background-size: cover;
+            background-position: center center;
+            height: 500px;  
+            width: 400px; 
+        }
+
+
+    }
+
+    #nuestros-catalogos{
+
+        .programas{
+            display: flex;
+            justify-content: center;
+        }
+
+        p{
+            display: block;
+            margin-bottom: 30px;
+        }
+
+        h3{
+            margin-top: 0;
+        }
+
+        .carta{
+            padding: 15px;
+            background-size: 100% 150px;
+            background-repeat: no-repeat;
+            background-position-y: 0;
+            background-color: rgba(50,50,50,50);
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+        }
+
+    }
+
+
+
+    @mixin cuadrado($fondito) {
+        background-image: linear-gradient(
+            0deg,
+            rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)
+        )
+        ,$fondito}
+    
+    
+    .carta:first-child{
+        @include cuadrado(url(../img/extras/pc.jpg));
+    }
+    
+    .carta:nth-child(2){
+        @include cuadrado(url(../img/extras/ps4.jpg));    
+    }
+    
+    .carta:nth-child(3){
+        @include cuadrado(url(../img/extras/xb.jpg));
+    }
+
+    #caracteristicas{
+        .container{
+            text-align: initial;
+        }
+
+        ul{
+            margin-left: 100px;
+        }
+
+    }
+
+    #compra-ya{
+        h2{
+            font-size: 2em;
+        }
+
+        button{
+            font-size: 2em;
+            margin-top: 50px;
+        }
+    }
+
+    .contact-wrapper {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+    .contact-wrapper > * {
+        padding: 2em;
+    }
+    .contact-info h4,
+    .contact-info ul,
+    .contact-info p {
+        text-align: left;
+    }
+    
+}

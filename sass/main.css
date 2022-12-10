@@ -1,0 +1,532 @@
+@import "_variables.css";
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: rgb(253, 253, 253);
+}
+
+body {
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  font-family: "Sono", sans-serif;
+  background-color: rgb(26, 25, 25);
+  padding-top: 170px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+img {
+  width: 320px;
+  height: 340px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 20px 20px 0px 0px;
+}
+
+header {
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  position: fixed;
+  width: 100%;
+}
+header .logo {
+  margin: 0;
+  padding: 0px 30px 5px;
+  font-weight: bold;
+  color: #f59f00;
+  font-size: 1.6em;
+}
+header .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+header nav {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding-bottom: 25px;
+}
+header a {
+  padding: 5px 12px;
+  text-decoration: none;
+  font-weight: bold;
+  color: rgb(180, 177, 177);
+}
+header a:hover {
+  color: rgb(228, 130, 3);
+  transform: scale(1.2);
+}
+
+.contenedor {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
+  margin-bottom: 20px;
+  margin-top: 140px;
+}
+
+.contenedor > div {
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  background-color: #f59f00;
+  border-radius: 20px;
+}
+
+.contenedor > div:hover {
+  background-color: #0d0d0e;
+}
+
+.informacion {
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.informacion > p:first-child {
+  font-family: "Montserrat", sans-serif;
+  font-size: 25px;
+  font-weight: 300;
+}
+
+.informacion .precio {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.informacion .precio span {
+  font-size: 17px;
+  font-weight: 300;
+}
+
+.informacion button {
+  background-color: #010813;
+  width: 100px;
+  height: 35px;
+  border-radius: 10px;
+  border: none;
+  font-size: 17px;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+.informacion button:hover {
+  background-color: #f76f00;
+}
+
+@media (min-width: 720px) {
+  header {
+    position: fixed;
+    width: 100%;
+  }
+  header .container {
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  header nav {
+    flex-direction: row;
+    padding-bottom: 0;
+    padding-right: 30px;
+  }
+  header .logo {
+    margin: 0;
+    padding: 20px 30px 20px;
+    font-weight: bold;
+    color: #f59f00;
+    font-size: 1.6em;
+  }
+  header a {
+    padding: 5px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(180, 177, 177);
+  }
+  header a:hover {
+    color: rgb(228, 130, 3);
+    transform: scale(1.2);
+  }
+  .contenedor {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin-bottom: 20px;
+    margin-top: 0px;
+  }
+  .contenedor > div {
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    background-color: #f59f00;
+    border-radius: 20px;
+  }
+  .contenedor > div:hover {
+    background-color: #0d0d0e;
+  }
+  .informacion {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .informacion > p:first-child {
+    font-family: "Montserrat", sans-serif;
+    font-size: 25px;
+    font-weight: 300;
+  }
+  .informacion .precio {
+    font-size: 20px;
+    font-weight: 500;
+  }
+  .informacion .precio span {
+    font-size: 17px;
+    font-weight: 300;
+  }
+  .informacion button {
+    background-color: #010813;
+    width: 100px;
+    height: 35px;
+    border-radius: 10px;
+    border: none;
+    font-size: 17px;
+    font-weight: 300;
+    cursor: pointer;
+  }
+  .informacion button:hover {
+    background-color: #f76f00;
+  }
+}
+h1 {
+  font-size: 3.5em;
+}
+
+h2 {
+  font-size: 2.7em;
+}
+
+h3 {
+  font-size: 2em;
+}
+
+p {
+  font-size: 1.25em;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  font-size: 1.25em;
+}
+
+.color-acento {
+  color: #f59f00;
+}
+
+button {
+  font-size: 2em;
+  font-weight: bold;
+  padding: 20px 30px;
+  border-radius: 15px;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  color: white;
+  background-color: #f59f00;
+}
+
+button:hover {
+  background-color: rgb(17, 17, 16);
+}
+
+.container {
+  max-width: 1400px;
+  margin: auto;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+.logo img {
+  display: flex;
+  height: 50px;
+  margin-right: 10px;
+}
+
+#hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  height: 90vh;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../img/aa.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+#hero h1 {
+  color: #f59f00;
+}
+
+#somos-pkg .container {
+  text-align: center;
+  padding: 200px 12px;
+}
+#somos-pkg .container h2 {
+  color: rgb(221, 221, 219);
+}
+#somos-pkg .container p {
+  color: rgb(221, 221, 219);
+}
+
+#nuestros-catalogos {
+  background-color: rgb(30, 30, 30);
+  color: white;
+  text-align: center;
+}
+#nuestros-catalogos .container {
+  padding: 150px 0px;
+}
+#nuestros-catalogos h2 {
+  margin-top: 0;
+}
+#nuestros-catalogos p {
+  display: none;
+}
+#nuestros-catalogos .carta {
+  background-position: center center;
+  background-size: cover;
+  padding: 50px;
+  margin: 20px;
+  border-radius: 15px;
+}
+
+.carta:first-child {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/extras/pc.jpg);
+}
+
+.carta:nth-child(2) {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/extras/ps4.jpg);
+}
+
+.carta:nth-child(3) {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/extras/xb.jpg);
+}
+
+#caracteristicas .container {
+  text-align: center;
+  padding: 200px;
+  color: rgb(221, 221, 219);
+}
+#caracteristicas li {
+  margin: 12px 0px;
+  font-weight: bold;
+}
+
+#compra-ya {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  height: 90vh;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/extras/aacla.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+#compra-ya h2 {
+  color: white;
+  font-size: 9vw;
+}
+#compra-ya button {
+  font-size: 5vw;
+}
+#compra-ya button:hover {
+  background-color: black;
+}
+
+footer .container {
+  height: 150px;
+  color: rgb(63, 62, 62);
+  background-color: rgb(44, 44, 44);
+}
+
+ul .ulista {
+  list-style: none;
+  padding: 0;
+}
+
+h4 {
+  color: #f59f00;
+}
+
+div a {
+  color: rgb(228, 130, 3);
+}
+
+div a:hover {
+  color: rgb(255, 93, 17);
+}
+
+.contact-wrapper {
+  padding-top: 0px;
+}
+
+.contact-wrapper > * {
+  padding: 1em;
+}
+
+.content {
+  padding-top: 100px;
+}
+
+.contact-form {
+  background: #222222;
+}
+
+.contact-form form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.contact-form form label {
+  display: block;
+}
+
+.contact-form form p {
+  margin: 0;
+  padding: 1em;
+}
+
+.contact-form form .block {
+  grid-column: 1/3;
+}
+
+.contact-form form button,
+.contact-form form input,
+.contact-form form textarea {
+  width: 100%;
+  padding: 0.7em;
+  border: none;
+  background: none;
+  outline: 0;
+  color: #fff;
+  border-bottom: 1px solid #f59f00;
+}
+
+.contact-form form button {
+  background: #f59f00;
+  border: 0;
+  text-transform: uppercase;
+  padding: 1em;
+}
+
+.contact-form form button:hover,
+.contact-form form button:focus {
+  background: #111111;
+  color: #fff;
+  transition: background-color 1s ease-out;
+  outline: 0;
+}
+
+.contact-info {
+  background: #000;
+}
+
+.contact-info h4, .contact-info ul, .contact-info p {
+  text-align: center;
+  margin: 0 0 1rem 0;
+}
+
+@media (min-width: 720px) {
+  #somos-pkg .container {
+    display: flex;
+    justify-content: center;
+  }
+  #somos-pkg .texto {
+    width: 50%;
+    max-width: 600px;
+    text-align: initial;
+    padding: 0px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  #somos-pkg h2 {
+    margin-top: 0px;
+  }
+  #somos-pkg .img-container {
+    background-image: url("../img/extras/ws_Halloween_pumpkin_1920x1440.jpg");
+    background-size: cover;
+    background-position: center center;
+    height: 500px;
+    width: 400px;
+  }
+  #nuestros-catalogos .programas {
+    display: flex;
+    justify-content: center;
+  }
+  #nuestros-catalogos p {
+    display: block;
+    margin-bottom: 30px;
+  }
+  #nuestros-catalogos h3 {
+    margin-top: 0;
+  }
+  #nuestros-catalogos .carta {
+    padding: 15px;
+    background-size: 100% 150px;
+    background-repeat: no-repeat;
+    background-position-y: 0;
+    background-color: rgb(50, 50, 50);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  }
+  .carta:first-child {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/extras/pc.jpg);
+  }
+  .carta:nth-child(2) {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/extras/ps4.jpg);
+  }
+  .carta:nth-child(3) {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/extras/xb.jpg);
+  }
+  #caracteristicas .container {
+    text-align: initial;
+  }
+  #caracteristicas ul {
+    margin-left: 100px;
+  }
+  #compra-ya h2 {
+    font-size: 2em;
+  }
+  #compra-ya button {
+    font-size: 2em;
+    margin-top: 50px;
+  }
+  .contact-wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+  .contact-wrapper > * {
+    padding: 2em;
+  }
+  .contact-info h4,
+.contact-info ul,
+.contact-info p {
+    text-align: left;
+  }
+}/*# sourceMappingURL=main.css.map */
